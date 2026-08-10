@@ -67,14 +67,6 @@ const SignupPage = () => {
       <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-amber-100/20 dark:bg-amber-400/5 rounded-full blur-[140px] -mr-40 -mt-40 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[30rem] h-[30rem] bg-gray-100 dark:bg-white/5 rounded-full blur-[100px] -ml-20 -mb-20 pointer-events-none" />
 
-      {/* Back to Overview Button */}
-      {/* <button 
-        onClick={() => navigate('/')}
-        className="absolute top-8 left-8 z-50 text-[10px] font-black uppercase tracking-widest text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors flex items-center gap-2"
-      >
-        <span>←</span> Back to Overview
-      </button> */}
-
       {/* Floating Theme Toggle */}
       <div className="absolute top-8 right-8 z-50">
       </div>
@@ -181,10 +173,18 @@ const SignupPage = () => {
           </button>
         </form>
 
-        <p className="text-center text-gray-400 dark:text-gray-500 text-xs font-medium mt-10">
-          Already a member?{' '}
-          <span onClick={() => navigate('/login')} className="text-[#fbbc05] font-black uppercase tracking-widest cursor-pointer hover:underline ml-1">Sign In</span>
-        </p>
+        <div className="mt-10 pt-8 border-t border-gray-50 dark:border-white/5 flex flex-col items-center gap-4">
+            <p className="text-gray-400 dark:text-gray-500 text-xs font-medium">
+              Already a member?{' '}
+              <span onClick={() => navigate('/login')} className="text-[#fbbc05] font-black uppercase tracking-widest cursor-pointer hover:underline ml-1">Sign In</span>
+            </p>
+            <button 
+              onClick={() => navigate('/')} 
+              className="text-gray-400 dark:text-gray-500 text-[10px] font-black uppercase tracking-widest hover:text-gray-900 dark:hover:text-white transition-colors"
+            >
+              ← Back to Overview
+            </button>
+        </div>
       </div>
     </div>
   );
